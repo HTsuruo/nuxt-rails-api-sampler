@@ -2,27 +2,35 @@ version: '3'
 services:
 
   db:
-    container_name: nuxt-rails-db
+    container_name: rails-db
     image: mysql:5.7
     ports:
       - '3306:3306'
     volumes:
-      - ./tmp/db/mysql/volumes:/var/lib/mysql
+      - ./backend/tmp/db/mysql/volumes:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: Password2020!
 
-  app:
-    build: .
-    container_name: nuxt-rails-app
+  backend:
+    build: backend/
+    container_name: rails-app
     command: bundle exec pumactl start
     volumes:
-      - .:/nuxt-rails-api-sampler
+      - ./backend:/nuxt-rails-api-sampler/backend
     ports:
       - 3000:3000
     depends_on:
       - db
     environment:
       RAILS_ENV: development
-
-# volumes:
-#   sockets:
+    
+  frontend:
+    build: frontend/
+    container_name: nuxt-app
+    command: npm run dev
+    ports:
+      - 3333:3333
+    volumes:
+      - ./frontend:/nuxt-rails-api-sampler/frontend
+    depends_on:
+      - backend
