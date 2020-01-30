@@ -19,7 +19,7 @@ $ docker-compose run app rails db:create
 ```
 
 * `create-nuxt-app` すると、いつものnuxtツリーが作られる
-
+	* コンテナ側で `npm install -g create-nuxt-app` を忘れずに
 ```
-$ docker-compose run frontend npx create-nuxt-app --no-deps
+$ docker-compose run --rm frontend npx create-nuxt-app
 ```

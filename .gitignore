@@ -19,3 +19,15 @@ backend/storage/*
 
 # Ignore master key for decrypting credentials and more.
 backend/config/master.key
+
+
+# dependencies
+frontend/node_module
+
+# Nuxt build
+frontend/.nuxt
+
+# Nuxt generate
+frontend/dist
+
+
