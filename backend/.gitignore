@@ -5,29 +5,18 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-backend/.bundle
+.bundle
 
 # Ignore all logfiles and tempfiles.
-backend/log/*
-backend/tmp/*
-!backend/log/.keep
-!backend/tmp/.keep
+log/*
+tmp/*
+!/log/.keep
+!/tmp/.keep
 
 # Ignore uploaded files in development.
-backend/storage/*
-!backend/storage/.keep
+storage/*
+!/storage/.keep
+.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-backend/config/master.key
-
-
-# dependencies
-frontend/node_module
-
-# Nuxt build
-frontend/.nuxt
-
-# Nuxt generate
-frontend/dist
-
-
+config/master.key
