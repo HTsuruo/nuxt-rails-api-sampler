@@ -35,4 +35,9 @@ html {
   margin: 0;
 }
 
+.container {
+  /* bulmaの基本設定は残しつつ足りないレイアウト要素を追加 */
+  margin: 80px auto;
+}
+
 </style>

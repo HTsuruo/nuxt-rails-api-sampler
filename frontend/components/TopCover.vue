@@ -1,18 +1,22 @@
 <template>
-    <div class='cover-container'>
-      <div class="container">
-        <h1>{{ title }}</h1>
-        <p>{{ description }}</p>
-      </div>
+  <div class="cover-container">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-  props: [
-    'title',
-    'description'
-  ]
+  // props: [
+  //   'title',
+  //   'description'
+  // ]
+  props: {
+    title: String,
+    description: String
+  }
 }
 </script>
 

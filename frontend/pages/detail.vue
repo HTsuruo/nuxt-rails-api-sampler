@@ -1,8 +1,8 @@
 <template>
   <div>
-    <top-cover title="Detail." description="選択されたコンテンツの詳細が表示されます" ></top-cover>
+    <top-cover title="Detail." description="選択されたコンテンツの詳細が表示されます" />
     <div class="container">
-        ああ
+      ああ
     </div>
   </div>
 </template>

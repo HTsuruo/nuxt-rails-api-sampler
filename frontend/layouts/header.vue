@@ -1,5 +1,5 @@
 <template>
-    <div>this is nuxt-rails-api-sampler</div>
+  <div>this is nuxt-rails-api-sampler</div>
 </template>
 
 <style lang="scss" scoped>
