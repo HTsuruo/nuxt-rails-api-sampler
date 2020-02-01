@@ -1,7 +1,8 @@
 <template>
   <div>
-    <top-cover title="Index." description="これはインデックスページです。リストが表示されます。" ></top-cover>
+    <top-cover title="Detail." description="選択されたコンテンツの詳細が表示されます" ></top-cover>
     <div class="container">
+        ああ
     </div>
   </div>
 </template>
