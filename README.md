@@ -1,6 +1,7 @@
 # nuxt-rails-api-sampler
-* Nuxt.js + Rails(APIモード) Sampler
-* Railsアーキテクトに `MVC + Service + Repository` を採用してみた
+* Nuxt.js + Rails Sampler
+* NuxtはSSR予定だけど動かない..（2020/02/04）
+* Railsアーキテクトに `MVC + Service + Repository` を採用してみたい
 
 
 ## Env.
