@@ -8,7 +8,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     # Nuxtの開発用ローカルサーバ.
-    origins '*'
+    origins 'http://localhost:8000'
 
     resource '*',
       headers: :any,

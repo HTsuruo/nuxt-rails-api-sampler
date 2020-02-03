@@ -7,18 +7,12 @@
           <th>ID</th>
           <th>タイトル</th>
           <th>説明</th>
-          <th />
         </thead>
         <tbody>
-          <tr>
-            <td>aa</td>
-            <td>名前</td>
-            <td>など</td>
-          </tr>
-          <tr>
-            <td>aa</td>
-            <td>名前</td>
-            <td>など</td>
+          <tr v-for="post in posts" :key="post.id">
+              <td><nuxt-link :to="`/detail/${post.id}`">{{ post.id }}</nuxt-link></td>
+              <td>{{ post.title }}</td>
+              <td>{{ post.description }}</td>
           </tr>
         </tbody>
       </table>
@@ -33,12 +27,18 @@ export default {
   components: {
     TopCover
   },
-  asyncData ({ $axios, params }) {
-    return $axios.get('http://localhost:3000/posts')
-      .then((res) => {
-        console.log(res)
-        return res
+  // data () {
+  //   return {
+  //     posts: ['HO']
+  //   }
+  // },
+  async asyncData ({ $axios }) {
+    const res = await $axios.get('http://localhost:3000/posts')
+      .catch((error) => {
+        console.log('response error: ', error)
+        return false
       })
+    return { posts: res.data }
   }
 }
 </script>
