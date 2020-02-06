@@ -15,6 +15,18 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  manifest: {
+    name: "nuxt-rails-api-sampler",
+    title: "nuxt-rails-api-sampler",
+    description: 'nuxt-rails-api-samplerです。',
+    lang: 'ja',
+    theme_color: "#529b58",
+    background_color: "#bde0c0",
+    display: "standalone",
+    scope: "/",
+    start_url: "/"
+  },
+
   /*
   ** Customize the progress-bar color
   */
@@ -44,7 +56,8 @@ export default {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
