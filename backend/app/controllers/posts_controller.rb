@@ -32,7 +32,7 @@ class PostsController < ApplicationController
         end
     end
 
-    private 
+    private
 
         def set_post
             @post = Post.find(params[:id])
